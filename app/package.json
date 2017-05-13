@@ -1,0 +1,19 @@
+{
+  "name": "ibm-hackathon",
+  "main": "index.js",
+  "description": "An App that classifies video images",
+  "version": "0.1.1",
+  "private": false,
+  "engines": {
+    "node": "4.*"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "watson-developer-cloud": "^2.31.1",
+    "universal-analytics"   : "^0.4.13"
+  },
+  "author": "Alexander Bachmannn",
+  "license": "MIT"
+}
