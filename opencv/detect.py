@@ -16,6 +16,19 @@ args = vars(ap.parse_args())
 hog = cv2.HOGDescriptor()
 hog.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
 
+cap = cv2.VideoCapture(0)
+ 
+while(True):
+    ret, frame = cap.read()
+    image = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+ 
+    cv2.imshow('frame', image)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+cap.release()
+cv2.destroyAllWindows()
+
 
 # loop over the image paths
 for imagePath in paths.list_images(args["images"]):
